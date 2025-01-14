@@ -43,7 +43,7 @@ function App() {
                   className="flex items-center px-4 py-2 rounded-md text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 transition-colors"
                 >
                   <Download className="w-4 h-4 mr-2" />
-                  CV
+                  Download CV
                 </a>
               </div>
             </div>
@@ -80,7 +80,7 @@ function App() {
                 className="flex items-center w-full px-3 py-2 rounded-md text-base font-medium text-white bg-blue-600 hover:bg-blue-700"
               >
                 <Download className="w-4 h-4 mr-2" />
-                Download Resume
+                Download CV
               </a>
             </div>
           </div>
