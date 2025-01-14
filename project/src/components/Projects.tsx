@@ -9,7 +9,7 @@ export function Projects() {
     {
       id: 'concedes',
       title: 'Concedes Digital Assets',
-      shortDescription: 'A fintech web application for cryptocurrency trading with support for multiple cryptocurrencies.',
+      shortDescription: 'Concedes Digital Assets is a fintech web application that empowers users to trade cryptocurrencies seamlessly',
       image: Concedes,
       tech: ['API Testing', 'PostgreSQL', 'Postman', 'MetaMask'],
       link: 'https://concedus.com/en/',
@@ -17,7 +17,7 @@ export function Projects() {
     {
       id: 'coupler',
       title: 'Coupler.io',
-      shortDescription: 'Data synchronization platform for enterprise metrics and analytics.',
+      shortDescription: 'A web application that synchronizes data between various services on a schedule. A tool that allows the enterprise and external users to manage and monitor metrics from Ads, marketplaces etc',
       image: CouplerIO,
       tech: ['API Testing', 'Data Integration', 'Mobile Testing', 'Google Cloud Console'],
       link: 'https://www.coupler.io/',
@@ -25,7 +25,7 @@ export function Projects() {
     {
       id: 'nectar',
       title: 'Nectar Corp Network Solutions',
-      shortDescription: 'Enterprise VoIP and SIP network management platform.',
+      shortDescription: 'Software solutions help to improve the management, visibility, and service delivery across global and enterprise converged VoIP, SIP and MPLS networks',
       image: NectarCorp,
       tech: ['API Testing', 'PostgreSQL', 'OpenShift', 'VirtualBox'],
       link: 'https://www.nectarcorp.com/',
@@ -33,7 +33,7 @@ export function Projects() {
     {
       id: 'cloud',
       title: 'Epam Cloud',
-      shortDescription: 'Enterprise VoIP and SIP network management platform.',
+      shortDescription: 'Multi-cloud orchestrator that helps user to manage different clouds: AWS, GCP, MS Azure from one application',
       image: EpamCloud,
       tech: ['API Testing', 'PostgreSQL', 'OpenShift', 'VirtualBox'],
       link: 'https://www.epam.com/services/cloud',
