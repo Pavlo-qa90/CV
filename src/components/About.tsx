@@ -3,7 +3,7 @@ import { Award, BookOpen, Coffee } from 'lucide-react';
 
 export function About() {
   const stats = [
-    { icon: Coffee, label: 'Projects Completed', value: '5' },
+    { icon: Coffee, label: 'Projects Completed', value: '4' },
     { icon: BookOpen, label: 'Years Experience', value: '6+' },
     { icon: Award, label: 'Awards', value: '5' },
   ];
