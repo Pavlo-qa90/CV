@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Download, Github, Linkedin, Mail, Menu, X } from 'lucide-react';
 import { Header } from './components/Header';
 import { About } from './components/About';

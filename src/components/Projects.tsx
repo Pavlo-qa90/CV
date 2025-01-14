@@ -1,4 +1,3 @@
-import React from 'react';
 import Concedes from './images/CONCEDUS_DIGTAL_ASSETS_MAIN_LOGO.png';
 import CouplerIO from './images/CouplerIO.jfif';
 import NectarCorp from './images/NectarCorp.jfif';

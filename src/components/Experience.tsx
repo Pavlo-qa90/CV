@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Building2, Calendar, ChevronDown, ChevronUp } from 'lucide-react';
+import { useState } from 'react';
+import {  Calendar, ChevronDown, ChevronUp } from 'lucide-react';
 import factory from './images/1648Factory.jfif';
 import railsware from './images/railsware.jfif';
 import softserve from './images/SoftServe.jfif';

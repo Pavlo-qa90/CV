@@ -1,4 +1,3 @@
-import React from 'react';
 import { Award, BookOpen, Coffee } from 'lucide-react';
 
 export function About() {

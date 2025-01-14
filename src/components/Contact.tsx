@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Mail, MessageSquare, Phone, ExternalLink, Send } from 'lucide-react';
+import { useState } from 'react';
+import { Mail, MessageSquare, Phone, ExternalLink } from 'lucide-react';
 
 export function Contact() {
   const [visibleContacts, setVisibleContacts] = useState<{ [key: string]: boolean }>({});
@@ -49,7 +49,7 @@ export function Contact() {
             Whether you have a question or just want to say hi, feel free to reach out!
           </p>
           <div className="space-y-6">
-            {contactInfo.map(({ icon: Icon, label, value, maskedValue, link }, index) => (
+            {contactInfo.map(({ icon: Icon, label, value, maskedValue, link } ) => (
               <div
                 key={label}
                 onClick={() => toggleVisibility(label)}
