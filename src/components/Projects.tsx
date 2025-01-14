@@ -26,7 +26,7 @@ export function Projects() {
       title: 'Nectar Corp Network Solutions',
       shortDescription: 'Software solutions help to improve the management, visibility, and service delivery across global and enterprise converged VoIP, SIP and MPLS networks',
       image: NectarCorp,
-      tech: ['API Testing', 'PostgreSQL', 'OpenShift', 'VirtualBox'],
+      tech: ['API Testing', 'PostgreSQL', 'OpenShift', 'VirtualBox', 'Linux','Microservices'],
       link: 'https://www.nectarcorp.com/',
     },
     {
@@ -34,7 +34,7 @@ export function Projects() {
       title: 'Epam Cloud',
       shortDescription: 'Multi-cloud orchestrator that helps user to manage different clouds: AWS, GCP, MS Azure from one application',
       image: EpamCloud,
-      tech: ['API Testing', 'PostgreSQL', 'OpenShift', 'VirtualBox'],
+      tech: ['CLI Testing', 'Cloud', 'AWS', 'GSP', 'AZURE'],
       link: 'https://www.epam.com/services/cloud',
     },
   ];
