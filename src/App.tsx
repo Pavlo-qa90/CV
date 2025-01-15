@@ -100,13 +100,13 @@ function App() {
       <footer className="bg-gray-800 mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="flex justify-center space-x-6">
-            <a href="https://github.com" className="text-gray-400 hover:text-white">
+            <a href="https://github.com/Pavlo-qa90" className="text-gray-400 hover:text-white">
               <Github className="h-6 w-6" />
             </a>
-            <a href="https://linkedin.com" className="text-gray-400 hover:text-white">
+            <a href="www.linkedin.com/in/pavlo-medvedskyi-74231913b" className="text-gray-400 hover:text-white">
               <Linkedin className="h-6 w-6" />
             </a>
-            <a href="mailto:contact@example.com" className="text-gray-400 hover:text-white">
+            <a href="medvedskiypa@gmail.com" className="text-gray-400 hover:text-white">
               <Mail className="h-6 w-6" />
             </a>
           </div>
