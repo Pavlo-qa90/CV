@@ -8,6 +8,7 @@ import { Skills } from './components/Skills';
 import { Projects } from './components/Projects';
 import { Contact } from './components/Contact';
 import { GoToTop } from './components/GoToTop';
+import CV from './components/Public/Pavlo Medvedskyi CV.pdf';
 
 
 function App() {
@@ -50,7 +51,7 @@ function App() {
                   </a>
                 ))}
                 <a
-                  href="./images/Pavlo_Medvedskyi_CV.pdf"
+                  href={CV}
                   download="Pavlo_Medvedskyi_CV.pdf"
                   className="flex items-center px-4 py-2 rounded-md text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 transition-colors"
                 >
@@ -87,7 +88,7 @@ function App() {
                 </a>
               ))}
               <a
-                href="./Pavlo_Medvedskyi_CV.pdf"
+                href={CV}
                 download="Pavlo_Medvedskyi_CV.pdf"
                 className="flex items-center px-4 py-2 rounded-md text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 transition-colors"
               >
