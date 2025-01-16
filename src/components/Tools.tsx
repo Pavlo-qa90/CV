@@ -7,76 +7,41 @@ import Sentry from './images/sentry-logo.png';
 import GCP from './images/google-cloud-console-social-preview.png';
 import postgreSQL from './images/postgre-sql-logo.png';
 import MSSQL from './images/sql-server-logo.png';
+import berbyDB from './images/derbydb.png'
+import choco from './images/Chocolatey_icon.png'
+import VB from './images/VB.png'
+import BigQuery from './images/BigQuery.png'
+import noSQL from './images/nosql.png'
+import jira from './images/jira.jfif'
+import zephyr from './images/zephyr.png'
+import confluence from './images/confluence.png'
+import idea from './images/idea.jfif'
+import dbeaver from './images/dbeaver-logo.png'
+import linux from './images/linux.jfif'
+import centOS from './images/centos.jfif'
 export function Tools() {
   const tools = [
-    {
-      name: 'Postman',
-      image: postman,
-    },
-    {
-      name: 'Swagger',
-      image: swagger,
-    },
-    {
-      name: 'Chrome Dev Tools',
-      image: chrome_dev_tools,
-    },
-    {
-      name: 'Jenkins',
-      image: Jenkins,
-    },
-    {
-      name: 'Fiddler',
-      image: Fiddler,
-    },
-    {
-      name: 'Sentry',
-      image: Sentry,
-    },
-    {
-      name: 'Google Cloud Console',
-      image: GCP,
-    },
-    {
-      name: 'PostgreSQL',
-      image: postgreSQL,
-    },
-    {
-      name: 'MSSQL',
-      image: MSSQL,
-    },
-    {
-      name: 'Derby DB',
-      image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=300&q=80',
-    },
-    {
-      name: 'Chocolatey',
-      image: 'https://images.unsplash.com/photo-1506617420156-8e4536971650?auto=format&fit=crop&w=300&q=80',
-    },
-    {
-      name: 'VirtualBox',
-      image: 'https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?auto=format&fit=crop&w=300&q=80',
-    },
-    {
-      name: 'Big Query',
-      image: 'https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=300&q=80',
-    },
-    {
-      name: 'NoSQL',
-      image: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=300&q=80',
-    },
-    {
-      name: 'Jira',
-      image: 'https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=300&q=80',
-    },
-    {
-      name: 'Zephyr',
-      image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=300&q=80',
-    },
-    {
-      name: 'Confluence',
-      image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=300&q=80',
-    },
+    { name: 'Postman', image: postman },
+    { name: 'Swagger', image: swagger },
+    { name: 'Chrome Dev Tools', image: chrome_dev_tools },
+    { name: 'Jenkins', image: Jenkins },
+    { name: 'Fiddler', image: Fiddler },
+    { name: 'Sentry', image: Sentry },
+    { name: 'Google Cloud Console', image: GCP },
+    { name: 'PostgreSQL', image: postgreSQL },
+    { name: 'MSSQL', image: MSSQL },
+    { name: 'Derby DB', image: berbyDB },
+    { name: 'Chocolatey', image: choco },
+    { name: 'VirtualBox', image: VB },
+    { name: 'Big Query', image: BigQuery },
+    { name: 'NoSQL', image: noSQL },
+    { name: 'Jira', image: jira },
+    { name: 'Zephyr', image: zephyr },
+    { name: 'Confluence', image: confluence },
+    { name: 'DBeaver', image: dbeaver },
+    { name: 'Linux', image: linux },
+    { name: 'CentOS', image: centOS },
+    { name: 'Intellijidea', image: idea }
   ];
 
   return (
