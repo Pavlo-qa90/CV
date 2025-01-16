@@ -8,12 +8,13 @@ import { Skills } from './components/Skills';
 import { Projects } from './components/Projects';
 import { Contact } from './components/Contact';
 import { GoToTop } from './components/GoToTop';
+import CV from './components/Public/Pavlo Medvedskyi CV.pdf';
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
-  
+
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -29,7 +30,7 @@ function App() {
       <nav className="fixed w-full bg-gray-900/95 backdrop-blur-sm z-50 border-b border-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
-            <span 
+            <span
               onClick={scrollToTop}
               className="text-xl font-bold bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent cursor-pointer hover:opacity-80 transition-opacity"
             >
@@ -48,13 +49,14 @@ function App() {
                     {section}
                   </a>
                 ))}
-                <button
+                <a
+                  href="/Public/Pavlo Medvedskyi CV.pdf"
+                  download="Pavlo_Medvedskyi_CV.pdf"
                   className="flex items-center px-4 py-2 rounded-md text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 transition-colors"
-                  onClick={() => window.open('/resume.pdf')}
                 >
                   <Download className="w-4 h-4 mr-2" />
-                  Resume
-                </button>
+                  Download CV
+                </a>
               </div>
             </div>
 
@@ -84,13 +86,14 @@ function App() {
                   {section}
                 </a>
               ))}
-              <button
-                className="flex items-center w-full px-3 py-2 rounded-md text-base font-medium text-white bg-blue-600 hover:bg-blue-700"
-                onClick={() => window.open('/resume.pdf')}
+              <a
+                href="/Public/Pavlo Medvedskyi CV.pdf"
+                download="Pavlo_Medvedskyi_CV.pdf"
+                className="flex items-center px-4 py-2 rounded-md text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 transition-colors"
               >
                 <Download className="w-4 h-4 mr-2" />
-                Download Resume
-              </button>
+                Download CV
+              </a>
             </div>
           </div>
         )}
