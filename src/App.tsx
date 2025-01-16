@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Download, Github, Linkedin, Mail, Menu, X } from 'lucide-react';
 import { Header } from './components/Header';
 import { About } from './components/About';
@@ -8,7 +8,7 @@ import { Skills } from './components/Skills';
 import { Projects } from './components/Projects';
 import { Contact } from './components/Contact';
 import { GoToTop } from './components/GoToTop';
-import CV from './components/Public/Pavlo Medvedskyi CV.pdf';
+
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
