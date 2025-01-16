@@ -1,19 +1,27 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { Download, Github, Linkedin, Mail, Menu, X } from 'lucide-react';
 import { Header } from './components/Header';
 import { About } from './components/About';
 import { Experience } from './components/Experience';
+import { Tools } from './components/Tools';
 import { Skills } from './components/Skills';
 import { Projects } from './components/Projects';
 import { Contact } from './components/Contact';
-import CV from './components/Public/Pavlo Medvedskyi CV.pdf'; // Импортируем файл резюме
+import { GoToTop } from './components/GoToTop';
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+  
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
 
-  const sections = ['About', 'Experience', 'Skills', 'Projects', 'Contact'];
+  const sections = ['About', 'Experience', 'Tools', 'Skills', 'Projects', 'Contact'];
 
   return (
     <div className="min-h-screen bg-gray-900 text-gray-100">
@@ -21,7 +29,10 @@ function App() {
       <nav className="fixed w-full bg-gray-900/95 backdrop-blur-sm z-50 border-b border-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
-            <span className="text-xl font-bold bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
+            <span 
+              onClick={scrollToTop}
+              className="text-xl font-bold bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent cursor-pointer hover:opacity-80 transition-opacity"
+            >
               Pavlo Medvedskyi
             </span>
 
@@ -37,14 +48,13 @@ function App() {
                     {section}
                   </a>
                 ))}
-                <a
-                  href={CV} // Ссылка на импортированный PDF
-                  download="Pavlo_Medvedskyi_Resume.pdf"
+                <button
                   className="flex items-center px-4 py-2 rounded-md text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 transition-colors"
+                  onClick={() => window.open('/resume.pdf')}
                 >
                   <Download className="w-4 h-4 mr-2" />
-                  Download CV
-                </a>
+                  Resume
+                </button>
               </div>
             </div>
 
@@ -74,14 +84,13 @@ function App() {
                   {section}
                 </a>
               ))}
-              <a
-                href={CV} // Ссылка на импортированный PDF
-                download="Pavlo_Medvedskyi_Resume.pdf"
+              <button
                 className="flex items-center w-full px-3 py-2 rounded-md text-base font-medium text-white bg-blue-600 hover:bg-blue-700"
+                onClick={() => window.open('/resume.pdf')}
               >
                 <Download className="w-4 h-4 mr-2" />
-                Download CV
-              </a>
+                Download Resume
+              </button>
             </div>
           </div>
         )}
@@ -91,6 +100,7 @@ function App() {
         <Header />
         <About />
         <Experience />
+        <Tools />
         <Skills />
         <Projects />
         <Contact />
@@ -100,13 +110,13 @@ function App() {
       <footer className="bg-gray-800 mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="flex justify-center space-x-6">
-            <a href="https://github.com/Pavlo-qa90" className="text-gray-400 hover:text-white">
+            <a href="https://github.com" className="text-gray-400 hover:text-white">
               <Github className="h-6 w-6" />
             </a>
-            <a href="www.linkedin.com/in/pavlo-medvedskyi-74231913b" className="text-gray-400 hover:text-white">
+            <a href="https://linkedin.com" className="text-gray-400 hover:text-white">
               <Linkedin className="h-6 w-6" />
             </a>
-            <a href="medvedskiypa@gmail.com" className="text-gray-400 hover:text-white">
+            <a href="mailto:contact@example.com" className="text-gray-400 hover:text-white">
               <Mail className="h-6 w-6" />
             </a>
           </div>
@@ -115,6 +125,8 @@ function App() {
           </p>
         </div>
       </footer>
+
+      <GoToTop />
     </div>
   );
 }
