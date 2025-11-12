@@ -20,11 +20,19 @@ function App() {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
 
+  // Resume download handler
   const openResume = (e: React.MouseEvent) => {
     e.preventDefault();
-    window.open('/resume.pdf', '_blank', 'noopener,noreferrer');
+    const resumePath = '/Medvedskiy_Pavlo_Resume.pdf';
+    const link = document.createElement('a');
+    link.href = resumePath;
+    link.download = 'Medvedskiy_Pavlo_Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
+  // Reveal animation
   useEffect(() => {
     const revealElements = document.querySelectorAll('.reveal');
     if (revealElements.length === 0) return;
@@ -59,7 +67,7 @@ function App() {
       <SEO />
 
       <div className="min-h-screen text-[#E8ECF5] overflow-x-hidden">
-        {/* 🌐 Navigation */}
+        {/* Navigation */}
         <nav className="fixed w-full glass-panel z-50 border-b border-white/10 animate-fade-blur" data-delay="1">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center justify-between h-16">
@@ -124,6 +132,7 @@ function App() {
                     {section.label}
                   </a>
                 ))}
+
                 <button
                   className="flex items-center w-full px-4 py-2 rounded-full text-base font-medium text-white liquid-glass-btn hover:scale-[1.02] transition-transform duration-300"
                   onClick={openResume}
@@ -136,7 +145,7 @@ function App() {
           )}
         </nav>
 
-        {/* 🧭 Main Content */}
+        {/* Main Content */}
         <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 space-y-24">
           <section id="header" className="reveal"><Header /></section>
           <section id="about" className="reveal"><About /></section>
@@ -147,7 +156,7 @@ function App() {
           <section id="contact" className="reveal"><Contact /></section>
         </main>
 
-        {/* ⚡ Footer */}
+        {/* Footer */}
         <footer className="glass-panel mt-20 border-t border-white/10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
             <div className="flex justify-center space-x-6">

@@ -17,7 +17,7 @@ export function Experience() {
       shortDescription:
         'Enterprise-level platform with integrated backend, API, and desktop applications for multiple operating systems. Focused on quality assurance across data flow, system logic, and cross-platform stability.',
       logo:
-        'https://images.unsplash.com/photo-1523966211575-eb4a01e7dd51?auto=format&fit=crop&w=256&q=80',
+        '/images/codyua.jpg',
       responsibilities: [
         'Performed manual and automated API testing using Java and RestAssured',
         'Designed and executed test cases for backend, database, and API validation',
@@ -37,7 +37,7 @@ export function Experience() {
       position: 'Senior Quality Assurance Engineer',
       period: '2024 - 2024',
       logo:
-        'https://images.unsplash.com/photo-1621761191319-c6fb62004040?auto=format&fit=crop&w=256&q=80',
+        '/images/1648factory_logo.jpg',
       responsibilities: [
         'Performed manual and API testing across multiple environments',
         'Created and executed automated Postman collections and runners',
@@ -57,7 +57,7 @@ export function Experience() {
       position: 'Senior Quality Assurance Engineer',
       period: '2022 - 2023',
       logo:
-        'https://images.unsplash.com/photo-1560472355-536de3962603?auto=format&fit=crop&w=256&q=80',
+        '/images/railsware.jpg',
       responsibilities: [
         'Performed manual API and database testing',
         'Validated data synchronization and ETL pipeline accuracy',
@@ -77,7 +77,7 @@ export function Experience() {
       position: 'Senior Quality Assurance Engineer',
       period: '2019 - 2022',
       logo:
-        'https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=256&q=80',
+        '/images/softserve.jpg',
       responsibilities: [
         'Analyzed functional requirements and created QA strategy for the project',
         'Developed and maintained regression and smoke test suites',
@@ -97,7 +97,7 @@ export function Experience() {
       position: 'Junior Quality Assurance Engineer',
       period: '2018 - 2019',
       logo:
-        'https://images.unsplash.com/photo-1661347333292-b783583d4210?auto=format&fit=crop&w=256&q=80',
+        '/images/epam.png',
       responsibilities: [
         'Performed manual functional and UI testing',
         'Documented defects and test results in Jira',
