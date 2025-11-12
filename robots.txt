@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pavlo-qa90.github.io/CV/sitemap.xml
