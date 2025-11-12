@@ -9,7 +9,7 @@ export function Projects() {
       title: 'Blai',
       shortDescription:
         'Blai is an AI-powered mobile app that helps users manage crypto investments through smart insights, chat-based interactions, and automated portfolio tracking.',
-      image: '/images/blai.png',
+      image: '/CV/images/blai.png',
       tech: ['API Testing', 'Mobile Testing', 'Swagger', 'iOS', 'Android'],
       link: 'https://play.google.com/store/apps/details?id=com.blai.app',
     },
@@ -18,7 +18,7 @@ export function Projects() {
       title: 'JMES World',
       shortDescription:
         'JMES World is a Web3 platform that enables creators and communities to collaborate, tokenize content, and participate in decentralized governance.',
-      image: '/images/JMES.jpg',
+      image: '/CV/images/JMES.jpg',
       tech: ['API Testing', 'Web Testing', 'Blockchain', 'Postman', 'Java', 'Rest Assured'],
       link: 'https://app.jmesworld.com/login',
     },
@@ -28,7 +28,7 @@ export function Projects() {
       title: 'SupaBox',
       shortDescription:
         'SupaBox is a gamified e-commerce platform that lets users open digital mystery boxes and win real-world prizes.',
-      image: '/images/supabox.png',
+      image: '/CV/images/supabox.png',
       tech: ['API Testing', 'PostgreSQL', 'Postman', 'Java', 'Rest Assured', 'Web Testing', 'Mobile Testing'],
       link: 'https://supabox.com/',
     },
@@ -38,7 +38,7 @@ export function Projects() {
       shortDescription:
         'Concedes Digital Assets is a fintech web application that empowers users to trade cryptocurrencies seamlessly.',
       image:
-        '/images/CONCEDUS.webp',
+        '/CV/images/CONCEDUS.webp',
       tech: ['API Testing', 'PostgreSQL', 'Postman', 'MetaMask', 'Blockchain'],
       link: 'https://concedus.com/en/',
     },
@@ -48,7 +48,7 @@ export function Projects() {
       shortDescription:
         'A web application that synchronizes data between various services on a schedule, allowing users to monitor and manage metrics from Ads and marketplaces.',
       image:
-        '/images/coupler.png',
+        '/CV/images/coupler.png',
       tech: ['API Testing', 'Data Integration', 'Mobile Testing', 'Google Cloud Console'],
       link: 'https://www.coupler.io/',
     },
@@ -58,7 +58,7 @@ export function Projects() {
       shortDescription:
         'Software solutions improving management, visibility, and service delivery across VoIP, SIP and MPLS networks.',
       image:
-        '/images/nectar_services_logo.jpg',
+        '/CV/images/nectar_services_logo.jpg',
       tech: ['API Testing', 'PostgreSQL', 'OpenShift', 'VirtualBox', 'Linux', 'Microservices'],
       link: 'https://www.nectarcorp.com/',
     },
@@ -68,7 +68,7 @@ export function Projects() {
       shortDescription:
         'Multi-cloud orchestrator helping users manage AWS, GCP, and MS Azure from one unified interface.',
       image:
-        '/images/epam_cloud.jpg',
+        '/CV/images/epam_cloud.jpg',
       tech: ['CLI Testing', 'Cloud', 'AWS', 'GCP', 'Azure'],
       link: 'https://www.epam.com/services/cloud',
     },

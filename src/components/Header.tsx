@@ -11,7 +11,7 @@ export function Header() {
     >
       <div className="relative z-10 flex flex-col md:flex-row items-center gap-16 px-6 md:px-12">
         <div className="relative w-64 h-64 md:w-72 md:h-72 rounded-full overflow-hidden flex-shrink-0 glass-halo hover:scale-105 transition-transform duration-500 shadow-[0_0_30px_rgba(109,220,255,0.3)]">
-          <img src="/images/Pavlo_medvedskyi.jpg" alt="Pavlo Medvedskyi" className="w-full h-full object-cover" loading="eager" />
+          <img src="/CV/images/Pavlo_medvedskyi.jpg" alt="Pavlo Medvedskyi" className="w-full h-full object-cover" loading="eager" />
           <div className="absolute inset-0 bg-gradient-to-br from-[#6DDCFF]/20 to-[#A67DFF]/20 mix-blend-overlay" />
         </div>
 

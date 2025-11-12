@@ -23,7 +23,7 @@ function App() {
   // Resume download handler
   const openResume = (e: React.MouseEvent) => {
     e.preventDefault();
-    const resumePath = '/Medvedskiy_Pavlo_Resume.pdf';
+    const resumePath = '/CV/Medvedskiy_Pavlo_Resume.pdf';
     const link = document.createElement('a');
     link.href = resumePath;
     link.download = 'Medvedskiy_Pavlo_Resume.pdf';

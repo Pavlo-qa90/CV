@@ -17,7 +17,7 @@ export function Experience() {
       shortDescription:
         'Enterprise-level platform with integrated backend, API, and desktop applications for multiple operating systems. Focused on quality assurance across data flow, system logic, and cross-platform stability.',
       logo:
-        '/images/codyua.jpg',
+        '/CV/images/codyua.jpg',
       responsibilities: [
         'Performed manual and automated API testing using Java and RestAssured',
         'Designed and executed test cases for backend, database, and API validation',
@@ -37,7 +37,7 @@ export function Experience() {
       position: 'Senior Quality Assurance Engineer',
       period: '2024 - 2024',
       logo:
-        '/images/1648factory_logo.jpg',
+        '/CV/images/1648factory_logo.jpg',
       responsibilities: [
         'Performed manual and API testing across multiple environments',
         'Created and executed automated Postman collections and runners',
@@ -57,7 +57,7 @@ export function Experience() {
       position: 'Senior Quality Assurance Engineer',
       period: '2022 - 2023',
       logo:
-        '/images/railsware.jpg',
+        '/CV/images/railsware.jpg',
       responsibilities: [
         'Performed manual API and database testing',
         'Validated data synchronization and ETL pipeline accuracy',
@@ -77,7 +77,7 @@ export function Experience() {
       position: 'Senior Quality Assurance Engineer',
       period: '2019 - 2022',
       logo:
-        '/images/softserve.jpg',
+        '/CV/images/softserve.jpg',
       responsibilities: [
         'Analyzed functional requirements and created QA strategy for the project',
         'Developed and maintained regression and smoke test suites',
@@ -97,7 +97,7 @@ export function Experience() {
       position: 'Junior Quality Assurance Engineer',
       period: '2018 - 2019',
       logo:
-        '/images/epam.png',
+        '/CV/images/epam.png',
       responsibilities: [
         'Performed manual functional and UI testing',
         'Documented defects and test results in Jira',
