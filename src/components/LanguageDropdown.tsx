@@ -104,8 +104,8 @@ export function LanguageDropdown() {
     <div className="relative inline-block" ref={dropdownRef}>
       <button
         onClick={toggleMenu}
-        aria-label="Language selector"
         aria-expanded={isOpen}
+        aria-haspopup="listbox"
         className="flex items-center space-x-2 px-4 py-2 rounded-full
           backdrop-blur-xl border border-[#6DDCFF]/30
           bg-[rgba(17,24,39,0.45)] text-white

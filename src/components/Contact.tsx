@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Mail, MessageSquare, Phone, Send, ExternalLink, Loader2 } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
+import { trackEvent } from '../utils/analytics';
 
 export function Contact() {
   const { t } = useLanguage();
@@ -37,12 +38,15 @@ export function Contact() {
       });
 
       if (response.ok) {
+        trackEvent('contact_form_submit', { status: 'success' });
         alert('Message sent successfully!');
         setFormData({ name: '', email: '', message: '' });
       } else {
+        trackEvent('contact_form_submit', { status: 'error' });
         alert('Something went wrong. Please try again later.');
       }
     } catch {
+      trackEvent('contact_form_submit', { status: 'network_error' });
       alert('Network error. Please check your connection.');
     } finally {
       setLoading(false);
@@ -50,7 +54,7 @@ export function Contact() {
   };
 
   return (
-    <section id="contact" className="relative py-24">
+    <section className="relative py-24">
       <div className="absolute inset-0 bg-gradient-to-br from-[#6DDCFF]/10 via-transparent to-[#A67DFF]/10 blur-3xl pointer-events-none"></div>
 
       <div className="relative z-10">
@@ -65,9 +69,13 @@ export function Contact() {
             </p>
 
             <div className="space-y-6">
-              <div
-                onClick={() => setShowPhone(true)}
-                className="flex items-center cursor-pointer text-[#E8ECF5]/90 hover:text-[#6DDCFF] transition-all duration-200"
+              <button
+                type="button"
+                onClick={() => {
+                  setShowPhone(true);
+                  trackEvent('contact_click', { channel: 'phone', location: 'contact_section' });
+                }}
+                className="w-full flex items-center cursor-pointer text-left text-[#E8ECF5]/90 hover:text-[#6DDCFF] transition-all duration-200 bg-transparent border-0 p-0"
               >
                 <div className="glass-halo w-12 h-12 flex items-center justify-center mr-4">
                   <Phone className="w-6 h-6 text-[#6DDCFF]" />
@@ -78,11 +86,15 @@ export function Contact() {
                     {showPhone ? '+38 (095) 0-555-314' : '+38 (095) ***-***'}
                   </div>
                 </div>
-              </div>
+              </button>
 
-              <div
-                onClick={() => setShowEmail(true)}
-                className="flex items-center cursor-pointer text-[#E8ECF5]/90 hover:text-[#6DDCFF] transition-all duration-200"
+              <button
+                type="button"
+                onClick={() => {
+                  setShowEmail(true);
+                  trackEvent('contact_click', { channel: 'email_reveal', location: 'contact_section' });
+                }}
+                className="w-full flex items-center cursor-pointer text-left text-[#E8ECF5]/90 hover:text-[#6DDCFF] transition-all duration-200 bg-transparent border-0 p-0"
               >
                 <div className="glass-halo w-12 h-12 flex items-center justify-center mr-4">
                   <Mail className="w-6 h-6 text-[#6DDCFF]" />
@@ -93,13 +105,14 @@ export function Contact() {
                     {showEmail ? 'Medvedskiypa@gmail.com' : 'M*********@gmail.com'}
                   </div>
                 </div>
-              </div>
+              </button>
 
               <a
                 href="https://www.linkedin.com/in/pavlo-medvedskyi-74231913b"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center text-[#E8ECF5]/90 hover:text-[#6DDCFF] transition-all duration-200"
+                onClick={() => trackEvent('social_click', { network: 'linkedin', location: 'contact_section' })}
               >
                 <div className="glass-halo w-12 h-12 flex items-center justify-center mr-4">
                   <ExternalLink className="w-6 h-6 text-[#6DDCFF]" />
@@ -115,6 +128,7 @@ export function Contact() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center text-[#E8ECF5]/90 hover:text-[#6DDCFF] transition-all duration-200"
+                onClick={() => trackEvent('contact_click', { channel: 'telegram', location: 'contact_section' })}
               >
                 <div className="glass-halo w-12 h-12 flex items-center justify-center mr-4">
                   <MessageSquare className="w-6 h-6 text-[#6DDCFF]" />

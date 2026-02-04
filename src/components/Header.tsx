@@ -1,17 +1,17 @@
 import { ArrowRight } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
+import { trackEvent } from '../utils/analytics';
 
 export function Header() {
   const { t } = useLanguage();
 
   return (
     <section
-      id="header"
       className="relative flex flex-col items-center justify-center min-h-screen overflow-hidden text-center md:text-left"
     >
-      <div className="relative z-10 flex flex-col md:flex-row items-center gap-16 px-6 md:px-12">
-        <div className="relative w-64 h-64 md:w-72 md:h-72 rounded-full overflow-hidden flex-shrink-0 glass-halo hover:scale-105 transition-transform duration-500 shadow-[0_0_30px_rgba(109,220,255,0.3)]">
-          <img src="/CV/images/Pavlo_medvedskyi.jpg" alt="Pavlo Medvedskyi" className="w-full h-full object-cover" loading="eager" />
+      <div className="relative z-10 flex flex-col md:flex-row items-center gap-10 md:gap-16 px-6 md:px-12">
+        <div className="hidden md:block relative w-64 h-64 md:w-72 md:h-72 rounded-full overflow-hidden flex-shrink-0 glass-halo hover:scale-105 transition-transform duration-500 shadow-[0_0_30px_rgba(109,220,255,0.3)]">
+          <img src={`${import.meta.env.BASE_URL}images/Pavlo_medvedskyi.jpg`} alt="Pavlo Medvedskyi" className="w-full h-full object-cover" loading="eager" decoding="async" width={320} height={320} />
           <div className="absolute inset-0 bg-gradient-to-br from-[#6DDCFF]/20 to-[#A67DFF]/20 mix-blend-overlay" />
         </div>
 
@@ -30,6 +30,7 @@ export function Header() {
           <a
             href="#contact"
             className="inline-flex items-center justify-center px-8 py-4 rounded-full text-white text-lg liquid-glass-btn hover:scale-105 transition-all duration-300"
+            onClick={() => trackEvent('cta_click', { cta: 'get_in_touch', location: 'hero' })}
           >
             {t('hero.cta')}
             <ArrowRight className="ml-2 h-6 w-6" />
@@ -37,8 +38,8 @@ export function Header() {
         </div>
       </div>
 
-      <div className="absolute top-1/4 left-1/4 w-48 h-48 rounded-full bg-gradient-to-tr from-[#6DDCFF]/10 to-[#A67DFF]/10 blur-2xl animate-pulse-slow" />
-      <div className="absolute bottom-1/4 right-1/4 w-64 h-64 rounded-full bg-gradient-to-tr from-[#A67DFF]/10 to-[#6DDCFF]/10 blur-3xl animate-pulse-slow" />
+      <div className="hidden md:block absolute top-1/4 left-1/4 w-40 h-40 rounded-full bg-gradient-to-tr from-[#6DDCFF]/10 to-[#A67DFF]/10 blur-2xl" />
+      <div className="hidden md:block absolute bottom-1/4 right-1/4 w-52 h-52 rounded-full bg-gradient-to-tr from-[#A67DFF]/10 to-[#6DDCFF]/10 blur-3xl" />
     </section>
   );
 }

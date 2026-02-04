@@ -17,7 +17,7 @@ export function Experience() {
       shortDescription:
         'Enterprise-level platform with integrated backend, API, and desktop applications for multiple operating systems. Focused on quality assurance across data flow, system logic, and cross-platform stability.',
       logo:
-        '/CV/images/codyua.jpg',
+        `${import.meta.env.BASE_URL}images/codyua.jpg`,
       responsibilities: [
         'Performed manual and automated API testing using Java and RestAssured',
         'Designed and executed test cases for backend, database, and API validation',
@@ -37,7 +37,7 @@ export function Experience() {
       position: 'Senior Quality Assurance Engineer',
       period: '2024 - 2024',
       logo:
-        '/CV/images/1648factory_logo.jpg',
+        `${import.meta.env.BASE_URL}images/1648factory_logo.jpg`,
       responsibilities: [
         'Performed manual and API testing across multiple environments',
         'Created and executed automated Postman collections and runners',
@@ -57,7 +57,7 @@ export function Experience() {
       position: 'Senior Quality Assurance Engineer',
       period: '2022 - 2023',
       logo:
-        '/CV/images/railsware.jpg',
+        `${import.meta.env.BASE_URL}images/railsware.jpg`,
       responsibilities: [
         'Performed manual API and database testing',
         'Validated data synchronization and ETL pipeline accuracy',
@@ -77,7 +77,7 @@ export function Experience() {
       position: 'Senior Quality Assurance Engineer',
       period: '2019 - 2022',
       logo:
-        '/CV/images/softserve.jpg',
+        `${import.meta.env.BASE_URL}images/softserve.jpg`,
       responsibilities: [
         'Analyzed functional requirements and created QA strategy for the project',
         'Developed and maintained regression and smoke test suites',
@@ -97,7 +97,7 @@ export function Experience() {
       position: 'Junior Quality Assurance Engineer',
       period: '2018 - 2019',
       logo:
-        '/CV/images/epam.png',
+        `${import.meta.env.BASE_URL}images/epam.png`,
       responsibilities: [
         'Performed manual functional and UI testing',
         'Documented defects and test results in Jira',
@@ -114,7 +114,7 @@ export function Experience() {
   };
 
   return (
-    <section id="experience" className="relative py-16 px-4 sm:px-8">
+    <section className="relative py-16 px-4 sm:px-8">
       <div className="absolute inset-0 bg-gradient-to-br from-[#6DDCFF]/10 via-transparent to-[#A67DFF]/10 blur-3xl pointer-events-none"></div>
 
       <div className="relative z-10 w-full max-w-3xl mx-auto">
@@ -136,12 +136,25 @@ export function Experience() {
               <div
                 className="p-6 sm:p-8 flex flex-col md:flex-row md:items-center md:justify-between cursor-pointer select-none"
                 onClick={() => toggleExpand(exp.id)}
+                onKeyDown={(event) => {
+                  if (event.key === 'Enter' || event.key === ' ') {
+                    event.preventDefault();
+                    toggleExpand(exp.id);
+                  }
+                }}
+                role="button"
+                tabIndex={0}
+                aria-expanded={expandedId === exp.id}
               >
                 <div className="flex items-center gap-4 mb-4 md:mb-0">
                   <img
                     src={exp.logo}
                     alt={exp.company}
                     className="w-12 h-12 sm:w-14 sm:h-14 rounded-full object-cover glass-halo"
+                    loading="lazy"
+                    decoding="async"
+                    width={56}
+                    height={56}
                   />
                   <div>
                     <a
@@ -154,7 +167,7 @@ export function Experience() {
                       {exp.company}
                       <ExternalLink className="w-4 h-4 text-[#6DDCFF]" />
                     </a>
-                    <h4 className="text-base sm:text-lg gradient-text">{exp.position}</h4>
+                    <h3 className="text-base sm:text-lg gradient-text">{exp.position}</h3>
                   </div>
                 </div>
 
@@ -177,9 +190,9 @@ export function Experience() {
               {/* Expanded content */}
               {expandedId === exp.id && (
                 <div className="px-6 sm:px-8 pb-8 pt-4 border-t border-white/10 backdrop-blur-sm">
-                  <h5 className="text-lg font-semibold gradient-text mb-4">
+                  <h4 className="text-lg font-semibold gradient-text mb-4">
                     Responsibilities:
-                  </h5>
+                  </h4>
                   <ul className="list-disc list-inside space-y-2 text-[#E8ECF5]/80 text-sm sm:text-base">
                     {exp.responsibilities.map((responsibility, index) => (
                       <li

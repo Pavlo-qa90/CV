@@ -54,7 +54,7 @@ const tools = [
 
 
   return (
-    <section id="tools" className="relative py-24">
+    <section className="relative py-24">
       {/* glowing background */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#6DDCFF]/10 via-transparent to-[#A67DFF]/10 blur-3xl pointer-events-none"></div>
 

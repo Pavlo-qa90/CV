@@ -11,7 +11,7 @@ export function About() {
   ];
 
   return (
-    <section id="about" className="py-24 relative">
+    <section className="py-24 relative">
       <div className="absolute inset-0 bg-gradient-to-br from-[#6DDCFF]/10 via-transparent to-[#A67DFF]/10 blur-3xl rounded-3xl pointer-events-none"></div>
 
       <div className="relative z-10">
