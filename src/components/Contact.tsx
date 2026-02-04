@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Mail, MessageSquare, Phone, Send, ExternalLink, Loader2 } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
-import { trackEvent } from '../utils/analytics';
+import { trackEvent, trackFunnelStep } from '../utils/analytics';
 
 export function Contact() {
   const { t } = useLanguage();
@@ -39,6 +39,8 @@ export function Contact() {
 
       if (response.ok) {
         trackEvent('contact_form_submit', { status: 'success' });
+        trackFunnelStep('contact_form_submit', { status: 'success' });
+        trackEvent('generate_lead', { method: 'contact_form' });
         alert('Message sent successfully!');
         setFormData({ name: '', email: '', message: '' });
       } else {

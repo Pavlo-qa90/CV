@@ -51,3 +51,19 @@ export function trackEvent(eventName: string, params: Record<string, string | nu
   }
 }
 
+const FUNNEL_STEP_ORDER: Record<string, number> = {
+  resume_download_click: 1,
+  contact_section_view: 2,
+  contact_form_submit: 3,
+};
+
+export function trackFunnelStep(
+  stepName: 'resume_download_click' | 'contact_section_view' | 'contact_form_submit',
+  params: Record<string, string | number | boolean> = {}
+) {
+  trackEvent('funnel_step', {
+    step_name: stepName,
+    step_order: FUNNEL_STEP_ORDER[stepName],
+    ...params,
+  });
+}

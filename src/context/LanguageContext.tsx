@@ -16,6 +16,7 @@ const translations = {
     'nav.tools': 'Tools & Technologies',
     'nav.skills': 'Skills',
     'nav.projects': 'Projects',
+    'nav.openToWork': 'Open to Work',
     'nav.contact': 'Contact',
     'nav.resume': 'Resume',
 
@@ -44,6 +45,20 @@ const translations = {
 
     // Projects
     'projects.title': 'Projects',
+
+    // Open To Work
+    'openToWork.title': 'Open to Work',
+    'openToWork.role.label': 'Desired Role',
+    'openToWork.role.value': 'Senior Manual QA Engineer',
+    'openToWork.format.label': 'Work Format',
+    'openToWork.format.value': 'Remote or Office',
+    'openToWork.timezone.label': 'Timezone',
+    'openToWork.timezone.value': 'Europe/Kyiv (GMT+2/GMT+3)',
+    'openToWork.availability.label': 'Availability',
+    'openToWork.availability.value': 'Open to new opportunities now',
+    'openToWork.interview.label': 'Interview Status',
+    'openToWork.interview.value': 'Ready for interviews',
+    'openToWork.recommendations.cta': 'LinkedIn Recommendations',
 
     // Contact
     'contact.title': 'Get in Touch',
@@ -81,6 +96,7 @@ const translations = {
     'nav.tools': 'Інструменти та технології',
     'nav.skills': 'Навички',
     'nav.projects': 'Проєкти',
+    'nav.openToWork': 'Відкритий до роботи',
     'nav.contact': 'Контакти',
     'nav.resume': 'Резюме',
 
@@ -109,6 +125,20 @@ const translations = {
 
     // Projects
     'projects.title': 'Проєкти',
+
+    // Open To Work
+    'openToWork.title': 'Відкритий до роботи',
+    'openToWork.role.label': 'Бажана роль',
+    'openToWork.role.value': 'Senior Manual QA Engineer',
+    'openToWork.format.label': 'Формат роботи',
+    'openToWork.format.value': 'Віддалено або офіс',
+    'openToWork.timezone.label': 'Часовий пояс',
+    'openToWork.timezone.value': 'Europe/Kyiv (GMT+2/GMT+3)',
+    'openToWork.availability.label': 'Доступність',
+    'openToWork.availability.value': 'Відкритий до нових можливостей зараз',
+    'openToWork.interview.label': 'Статус інтерв’ю',
+    'openToWork.interview.value': 'Готовий до співбесід',
+    'openToWork.recommendations.cta': 'Рекомендації в LinkedIn',
 
     // Contact
     'contact.title': "Зв'язатися",

@@ -6,13 +6,14 @@ import { LanguageDropdown } from './components/LanguageDropdown';
 import { useLanguage } from './context/LanguageContext';
 import { HelmetProvider } from 'react-helmet-async';
 import { SEO } from './SEO';
-import { initAnalytics, trackEvent } from './utils/analytics';
+import { initAnalytics, trackEvent, trackFunnelStep } from './utils/analytics';
 
 const About = lazy(() => import('./components/About').then((m) => ({ default: m.About })));
 const Experience = lazy(() => import('./components/Experience').then((m) => ({ default: m.Experience })));
 const Tools = lazy(() => import('./components/Tools').then((m) => ({ default: m.Tools })));
 const Skills = lazy(() => import('./components/Skills').then((m) => ({ default: m.Skills })));
 const Projects = lazy(() => import('./components/Projects').then((m) => ({ default: m.Projects })));
+const OpenToWork = lazy(() => import('./components/OpenToWork').then((m) => ({ default: m.OpenToWork })));
 const Contact = lazy(() => import('./components/Contact').then((m) => ({ default: m.Contact })));
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
   const openResume = (e: React.MouseEvent) => {
     e.preventDefault();
     trackEvent('resume_download_click', { source: 'navigation' });
+    trackFunnelStep('resume_download_click', { source: 'navigation' });
     const resumePath = `${import.meta.env.BASE_URL}Medvedskiy_Pavlo_Resume.pdf`;
     const link = document.createElement('a');
     link.href = resumePath;
@@ -87,6 +89,7 @@ function App() {
             if (!wasTracked) {
               sessionStorage.setItem(sessionKey, '1');
               trackEvent('contact_section_view', { page: 'resume' });
+              trackFunnelStep('contact_section_view', { page: 'resume' });
             }
             contactObserver?.disconnect();
           });
@@ -119,6 +122,7 @@ function App() {
     { id: 'projects', label: t('nav.projects') },
     { id: 'tools', label: t('nav.tools') },
     { id: 'skills', label: t('nav.skills') },
+    { id: 'open-to-work', label: t('nav.openToWork') },
     { id: 'contact', label: t('nav.contact') },
   ];
 
@@ -215,6 +219,7 @@ function App() {
           <section id="projects" className="reveal"><Suspense fallback={null}><Projects /></Suspense></section>
           <section id="tools" className="reveal"><Suspense fallback={null}><Tools /></Suspense></section>
           <section id="skills" className="reveal"><Suspense fallback={null}><Skills /></Suspense></section>
+          <section id="open-to-work" className="reveal"><Suspense fallback={null}><OpenToWork /></Suspense></section>
           <section id="contact" className="reveal"><Suspense fallback={null}><Contact /></Suspense></section>
         </main>
 
