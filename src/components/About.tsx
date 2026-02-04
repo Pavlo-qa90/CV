@@ -3,6 +3,10 @@ import { useLanguage } from '../context/LanguageContext';
 
 export function About() {
   const { t } = useLanguage();
+  const qaKeywords = t('about.keywords.list')
+    .split(',')
+    .map((item) => item.trim())
+    .filter(Boolean);
 
   const stats = [
     { icon: Coffee, label: t('about.stats.projects'), value: '7' },
@@ -25,6 +29,19 @@ export function About() {
             <p className="text-[#E8ECF5]/90 leading-relaxed text-lg tracking-wide">
               {t('about.description')}
             </p>
+            <div className="mt-6">
+              <p className="text-sm text-[#E8ECF5]/70 mb-3">{t('about.keywords.title')}</p>
+              <div className="flex flex-wrap gap-2">
+                {qaKeywords.map((keyword) => (
+                  <span
+                    key={keyword}
+                    className="px-3 py-1 rounded-full text-xs text-[#E8ECF5]/80 bg-[rgba(255,255,255,0.06)] border border-[#6DDCFF]/20"
+                  >
+                    {keyword}
+                  </span>
+                ))}
+              </div>
+            </div>
           </div>
 
           {/* === Right: Stats === */}

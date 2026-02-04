@@ -30,6 +30,9 @@ const translations = {
     'about.title': 'About Me',
     'about.description':
       'I am a Senior Quality Assurance Engineer with over six years of experience in software testing. My expertise lies in ensuring product quality through rigorous testing processes, collaboration, and leadership. I have a strong foundation in testing methodologies, team mentoring, and effective communication with stakeholders.',
+    'about.keywords.title': 'Core QA Focus',
+    'about.keywords.list':
+      'Senior QA Engineer, Senior Manual QA Engineer, Manual QA, QA Engineer, Quality Assurance, Software Tester, API Testing, Regression Testing, Test Case Design',
     'about.stats.projects': 'Projects Completed',
     'about.stats.experience': 'Years Experience',
     'about.stats.awards': 'Awards',
@@ -110,6 +113,9 @@ const translations = {
     'about.title': 'Про мене',
     'about.description':
       'Я старший інженер із забезпечення якості з більш ніж шестирічним досвідом у тестуванні програмного забезпечення. Моя експертиза полягає у забезпеченні якості продукту через ретельні процеси тестування, співпрацю та лідерство. Маю міцну основу в методологіях тестування, наставництві команди та ефективній комунікації із зацікавленими сторонами.',
+    'about.keywords.title': 'Ключова QA спеціалізація',
+    'about.keywords.list':
+      'Senior QA Engineer, Senior Manual QA Engineer, Manual QA, QA Engineer, Quality Assurance, Software Tester, API Testing, Regression Testing, Test Case Design',
     'about.stats.projects': 'Завершених проєктів',
     'about.stats.experience': 'Років досвіду',
     'about.stats.awards': 'Нагород',

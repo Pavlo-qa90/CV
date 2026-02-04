@@ -9,11 +9,11 @@ export function SEO() {
 
   // ======= ENGLISH VERSION =======
   const en = {
-    title: 'Pavlo Medvedskyi — Senior QA Engineer | Manual & Automation Testing',
+    title: 'Pavlo Medvedskyi — Senior Manual QA Engineer | QA Engineer Resume',
     description:
-      'Senior Quality Assurance Engineer with 6+ years of experience ensuring software quality through manual and automation testing, API validation, and test strategy design.',
+      'Senior Manual QA Engineer (Senior QA / QA Engineer) with 6+ years of experience in manual testing, API testing, regression testing, and end-to-end quality assurance.',
     keywords:
-      'QA Engineer, Quality Assurance, Manual Testing, Automation, Java, TestNG, Selenide, Rest Assured, API Testing, Software QA, Ivano-Frankivsk, Ukraine',
+      'Senior QA Engineer, Senior Manual QA Engineer, Manual QA, QA Engineer, Quality Assurance Engineer, Software Tester, API Testing, Regression Testing, Test Case Design, Manual Testing, Ivano-Frankivsk, Ukraine',
     url: siteUrl,
     image: previewImage,
     locale: 'en_US',
@@ -21,11 +21,11 @@ export function SEO() {
 
   // ======= UKRAINIAN VERSION =======
   const ua = {
-    title: 'Павло Медведський — Senior QA Engineer | Ручне та Автоматизоване Тестування',
+    title: 'Павло Медведський — Senior Manual QA Engineer | QA Engineer Resume',
     description:
-      'Старший інженер із забезпечення якості з понад 6-річним досвідом у ручному та автоматизованому тестуванні, API перевірці та розробці тестових стратегій.',
+      'Старший інженер із забезпечення якості (Senior QA / Senior Manual QA Engineer) з понад 6-річним досвідом у manual QA, API testing, regression testing та end-to-end quality assurance.',
     keywords:
-      'QA Engineer, тестувальник, забезпечення якості, ручне тестування, автоматизація, Java, TestNG, Selenide, Rest Assured, тестування API, Івано-Франківськ, Україна',
+      'Senior QA Engineer, Senior Manual QA Engineer, Manual QA, QA Engineer, тестувальник, забезпечення якості, ручне тестування, тестування API, regression testing, test case design, Івано-Франківськ, Україна',
     url: siteUrl,
     image: previewImage,
     locale: 'uk_UA',
@@ -44,6 +44,16 @@ export function SEO() {
     image: seo.image,
     jobTitle: 'Senior Quality Assurance Engineer',
     knowsLanguage: ['en', 'uk'],
+    knowsAbout: [
+      'Senior QA Engineer',
+      'Senior Manual QA Engineer',
+      'Manual QA',
+      'Quality Assurance',
+      'API Testing',
+      'Regression Testing',
+      'Test Case Design',
+      'Software Testing',
+    ],
     sameAs: [
       'https://www.linkedin.com/in/pavlo-medvedskyi-74231913b',
       'https://github.com/Pavlo-qa90',
@@ -63,6 +73,26 @@ export function SEO() {
     name: siteName,
     inLanguage,
     publisher: {
+      '@id': `${siteUrl}#person`,
+    },
+  };
+
+  const webpageJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    '@id': `${siteUrl}#webpage`,
+    url: siteUrl,
+    name: seo.title,
+    description: seo.description,
+    inLanguage,
+    about: [
+      'Senior QA Engineer',
+      'Senior Manual QA Engineer',
+      'Manual QA',
+      'QA Engineer',
+      'Quality Assurance',
+    ],
+    mainEntity: {
       '@id': `${siteUrl}#person`,
     },
   };
@@ -111,6 +141,7 @@ export function SEO() {
       {/* ====== STRUCTURED DATA ====== */}
       <script type="application/ld+json">{JSON.stringify(personJsonLd)}</script>
       <script type="application/ld+json">{JSON.stringify(websiteJsonLd)}</script>
+      <script type="application/ld+json">{JSON.stringify(webpageJsonLd)}</script>
 
       {/* ====== FAVICON & THEME ====== */}
       <link rel="icon" type="image/png" href={`${import.meta.env.BASE_URL}images/favicon2.png`} />
