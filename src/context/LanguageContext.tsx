@@ -39,6 +39,14 @@ const translations = {
 
     // Tools
     'tools.title': 'Tools & Technologies',
+    'tools.cat.api': 'API & Backend',
+    'tools.cat.ui': 'UI / Automation',
+    'tools.cat.db': 'Databases',
+    'tools.cat.dev': 'Dev & IDE',
+    'tools.cat.ci': 'CI/CD & Infrastructure',
+    'tools.cat.mgmt': 'Test Management',
+    'tools.cat.monitor': 'Monitoring & Debug',
+    'tools.cat.docs': 'Documentation',
 
     // Skills
     'skills.title': 'Skills',
@@ -122,6 +130,14 @@ const translations = {
 
     // Tools
     'tools.title': 'Інструменти та технології',
+    'tools.cat.api': 'API та бекенд',
+    'tools.cat.ui': 'UI / Автоматизація',
+    'tools.cat.db': 'Бази даних',
+    'tools.cat.dev': 'Dev та IDE',
+    'tools.cat.ci': 'CI/CD та інфраструктура',
+    'tools.cat.mgmt': 'Управління тестуванням',
+    'tools.cat.monitor': 'Моніторинг та дебаг',
+    'tools.cat.docs': 'Документація',
 
     // Skills
     'skills.title': 'Навички',

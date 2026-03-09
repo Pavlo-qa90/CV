@@ -3,59 +3,43 @@ import { useLanguage } from '../context/LanguageContext';
 export function Tools() {
   const { t } = useLanguage();
 
-const tools = [
-  // 🔹 API & Backend Testing
-  'Postman',
-  'Swagger',
-  'Rest Assured',
-  'Fiddler',
-  'TestNG',
-
-  // 🔹 UI / Automation
-  'Selenide',
-  'Playwright',
-  'Selenium',
-
-  // 🔹 Databases
-  'PostgreSQL',
-  'MSSQL',
-  'Derby DB',
-  'NoSQL',
-  'BigQuery',
-  'DBeaver',
-
-  // 🔹 Dev & IDE
-  'IntelliJ IDEA',
-  'Java',
-  'Maven',
-  'Git',
-  'GitHub Actions',
-
-  // 🔹 CI/CD & Infrastructure
-  'Jenkins',
-  'Docker',
-  'VirtualBox',
-  'Google Cloud Console',
-
-  // 🔹 Test Management & Reporting
-  'Jira',
-  'Zephyr',
-  'TestRail',
-  'Allure Report',
-
-  // 🔹 Monitoring & Debug
-  'Sentry',
-  'Chrome DevTools',
-
-  // 🔹 Documentation & Collaboration
-  'Confluence',
-  'Notion',
-];
-
+  const toolGroups = [
+    {
+      title: t('tools.cat.api'),
+      items: ['Postman', 'Swagger', 'Rest Assured', 'Fiddler', 'TestNG'],
+    },
+    {
+      title: t('tools.cat.ui'),
+      items: ['Selenide', 'Playwright', 'Selenium'],
+    },
+    {
+      title: t('tools.cat.db'),
+      items: ['PostgreSQL', 'MSSQL', 'Derby DB', 'NoSQL', 'BigQuery', 'DBeaver'],
+    },
+    {
+      title: t('tools.cat.dev'),
+      items: ['IntelliJ IDEA', 'Java', 'Maven', 'Git', 'GitHub Actions'],
+    },
+    {
+      title: t('tools.cat.ci'),
+      items: ['Jenkins', 'Docker', 'VirtualBox', 'Google Cloud Console'],
+    },
+    {
+      title: t('tools.cat.mgmt'),
+      items: ['Jira', 'Zephyr', 'TestRail', 'Allure Report'],
+    },
+    {
+      title: t('tools.cat.monitor'),
+      items: ['Sentry', 'Chrome DevTools'],
+    },
+    {
+      title: t('tools.cat.docs'),
+      items: ['Confluence', 'Notion'],
+    },
+  ];
 
   return (
     <section className="relative py-24">
-      {/* glowing background */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#6DDCFF]/10 via-transparent to-[#A67DFF]/10 blur-3xl pointer-events-none"></div>
 
       <div className="relative z-10 flex flex-col items-center text-center">
@@ -63,22 +47,25 @@ const tools = [
           {t('tools.title')}
         </h2>
 
-        <div
-          className="flex flex-wrap justify-center gap-5 max-w-6xl mx-auto"
-        >
-          {tools.map((tool) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-6xl">
+          {toolGroups.map((group) => (
             <div
-              key={tool}
-              className="px-6 py-3 min-w-[140px] rounded-2xl
-                         bg-[rgba(17,24,39,0.55)] backdrop-blur-xl
-                         border border-[#6DDCFF]/20
-                         shadow-[0_4px_25px_rgba(109,220,255,0.1)]
-                         text-[#E8ECF5]/90 font-medium text-sm tracking-wide
-                         flex items-center justify-center text-center
-                         transition-all duration-300 hover:scale-105 hover:text-[#6DDCFF]
-                         hover:border-[#6DDCFF]/50 hover:shadow-[0_0_25px_rgba(109,220,255,0.3)]"
+              key={group.title}
+              className="glass-panel p-6 rounded-3xl text-left hover-bloom"
             >
-              {tool}
+              <h3 className="text-lg font-semibold text-[#E8ECF5]/90 mb-4">
+                {group.title}
+              </h3>
+              <div className="flex flex-wrap gap-2">
+                {group.items.map((tool) => (
+                  <span
+                    key={tool}
+                    className="px-3 py-1 rounded-full text-xs text-[#E8ECF5]/80 bg-[rgba(255,255,255,0.06)] border border-[#6DDCFF]/20"
+                  >
+                    {tool}
+                  </span>
+                ))}
+              </div>
             </div>
           ))}
         </div>

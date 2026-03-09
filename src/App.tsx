@@ -138,7 +138,7 @@ function App() {
               <button
                 type="button"
                 onClick={scrollToTop}
-                className="brand-name gradient-text cursor-pointer hover:opacity-80 transition-opacity bg-transparent border-0 p-0"
+                className="brand-name gradient-text cursor-pointer hover:opacity-80 transition-opacity bg-transparent border-0 p-0 mr-6"
                 data-delay="1"
               >
                 Pavlo Medvedskyi
