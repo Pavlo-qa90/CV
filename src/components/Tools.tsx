@@ -6,19 +6,19 @@ export function Tools() {
   const toolGroups = [
     {
       title: t('tools.cat.api'),
-      items: ['Postman', 'Swagger', 'Rest Assured', 'Fiddler', 'TestNG'],
+      items: ['Postman', 'Swagger', 'Fiddler'],
     },
     {
       title: t('tools.cat.ui'),
-      items: ['Selenide', 'Playwright', 'Selenium'],
+      items: ['Selenide', 'Rest Assured', 'TestNG'],
     },
     {
       title: t('tools.cat.db'),
-      items: ['PostgreSQL', 'MSSQL', 'Derby DB', 'NoSQL', 'BigQuery', 'DBeaver'],
+      items: ['PostgreSQL', 'MSSQL', 'Derby DB', 'NoSQL', 'BigQuery', 'DBeaver', 'Java JDBC'],
     },
     {
       title: t('tools.cat.dev'),
-      items: ['IntelliJ IDEA', 'Java', 'Maven', 'Git', 'GitHub Actions'],
+      items: ['IntelliJ IDEA', 'Java', 'Git', 'GitHub Actions'],
     },
     {
       title: t('tools.cat.ci'),
